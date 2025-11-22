@@ -19,11 +19,11 @@ export function NewsCard({ article }: { article: NewsArticle }) {
         <div className="custom-newscard flex min-w-0 flex-1 flex-col">
           <header className="flex items-center justify-between text-[11px] text-[#9aa0a6]">
             <div className="flex items-center gap-2 truncate">
-              <span className="font-medium text-[#e8eaed]">
-                {article.source}
+              <span className="custom-source font-medium text-[#e8eaed]">
+                情報源：{article.source}
               </span>
               <span className="h-1 w-1 rounded-full bg-[#5f6368]" />
-              <span className="truncate">{article.publishedAt}</span>
+              <span className="custom-publishedAt truncate">{article.publishedAt}</span>
             </div>
           </header>
 
@@ -31,15 +31,15 @@ export function NewsCard({ article }: { article: NewsArticle }) {
             {article.title}
           </h2>
 
-          <p className="mt-1 text-xs leading-relaxed text-[#e8eaed] opacity-90 line-clamp-2">
+          <p className="custom-summary mt-1 text-xs leading-relaxed text-[#e8eaed] opacity-90 line-clamp-2">
             {article.summary}
           </p>
 
-          <div className="mt-2 flex flex-wrap gap-1 text-[10px] text-[#9aa0a6]">
+          <div className="custom-tag mt-2 flex flex-wrap gap-1 text-[10px] text-[#9aa0a6]">
             {article.tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full border border-[#3c4043] bg-[#202124] px-2 py-0.5"
+                className="custom-tagname border border-[#3c4043] bg-[#202124] px-2 py-0.5"
               >
                 #{tag}
               </span>

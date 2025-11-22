@@ -77,6 +77,30 @@ body {
   text-align: center;
 }
 
+.custom-source {
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+
+.custom-publishedAt {
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+
+.custom-summary {
+  margin-top: 0;
+}
+
+.custom-tag {
+  gap: 10px;
+}
+
+.custom-tagname {
+  width: auto;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 .custom-news {
   margin-bottom: 20px;
   padding-left: 20px;
