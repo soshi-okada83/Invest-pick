@@ -50,8 +50,8 @@
 
 ## 🛠 使用技術
 
-- **フロントエンド：**Next.js + TypeScript
-- **レイアウト：**Tailwind CSS / カスタム CSS：`app/globals.css`
+- **フロント:** Next.js + TypeScript
+- **レイアウト:** Tailwind CSS / `app/globals.css`
 
 ---
 
