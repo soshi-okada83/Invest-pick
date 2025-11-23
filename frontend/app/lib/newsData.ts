@@ -1,7 +1,6 @@
-// app/lib/newsData.ts
 
 export type NewsArticle = {
-  id: string;
+  id: number;
   source: string;
   publishedAt: string;
   title: string;
@@ -12,7 +11,7 @@ export type NewsArticle = {
 
 export const newsArticles: NewsArticle[] = [
   {
-    id: "1",
+    id: 1,
     source: "Bloomberg",
     publishedAt: "15分前",
     title: "日経平均、生成AI関連銘柄主導で続伸　半導体需要への期待広がる",
@@ -23,7 +22,7 @@ export const newsArticles: NewsArticle[] = [
     tags: ["日本株", "半導体", "生成AI"],
   },
   {
-    id: "2",
+    id: 2,
     source: "日経電子版",
     publishedAt: "1時間前",
     title: "米CPI、市場予想を下回る　利下げ観測強まり長期金利が低下",
@@ -34,7 +33,7 @@ export const newsArticles: NewsArticle[] = [
     tags: ["米国株", "マクロ", "インフレ"],
   },
   {
-    id: "3",
+    id: 3,
     source: "Reuters",
     publishedAt: "3時間前",
     title: "ビットコイン、一時7万ドル割れ　ETF資金流入が鈍化",
@@ -46,6 +45,6 @@ export const newsArticles: NewsArticle[] = [
   },
 ];
 
-export function getArticleById(id: string) {
+export function getArticleById(id: number) {
   return newsArticles.find((a) => a.id === id);
 }

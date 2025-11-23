@@ -1,0 +1,14 @@
+# Python venv
+.venv/
+backend/.venv/
+
+# Python キャッシュ
+__pycache__/
+**/__pycache__/
+
+# env files
+.env
+backend/.env
+
+# venv
+backend/.venv/
