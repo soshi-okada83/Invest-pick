@@ -1,11 +1,49 @@
-// app/page.tsx
 "use client";
 
+import { useEffect, useState } from "react";
 import { SidebarNav } from "./components/SidebarNav";
 import { NewsCard } from "./components/NewsCard";
-import { newsArticles } from "./lib/newsData";
+import type { NewsArticle } from "./lib/newsData";
 
 export default function Page() {
+  const [articles, setArticles] = useState<NewsArticle[]>([]);
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const baseUrl =
+          process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+        const res = await fetch(`${baseUrl}/news`);
+        if (!res.ok) {
+          console.error("ニュース取得に失敗しました");
+          return;
+        }
+        const data = await res.json();
+        console.log("APIレスポンス", data);
+
+        const normalized: NewsArticle[] = (data.articles ?? []).map(
+          (a: any, i: number): NewsArticle => ({
+            id: Number(i),
+            title: a.title ?? "",
+            source: a.source ?? "",
+            publishedAt: a.publishedAt ?? "",
+            summary: a.description ?? "",
+            content: a.description ?? "",
+            tags: [],
+          })
+        );
+
+        console.log("整形後の記事", normalized);
+
+        setArticles(normalized);
+      } catch (e) {
+        console.error("ニュース取得エラー:", e);
+      }
+    };
+
+    fetchNews();
+  }, []);
+
   return (
     <main className="min-h-screen bg-[#202124] text-[#e8eaed]">
      <header className="custom-header border-b border-[#3c4043] bg-[#202124] shadow-md">
@@ -52,7 +90,7 @@ export default function Page() {
             </section>
 
             <section className="space-y-4">
-              {newsArticles.map((article) => (
+              {articles.map((article) => (
                 <NewsCard key={article.id} article={article} />
               ))}
             </section>
