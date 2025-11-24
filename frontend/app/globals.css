@@ -33,6 +33,10 @@ body {
   padding-bottom: 10px;
 }
 
+.custom-newsdetail-header {
+  margin-bottom: 30px;
+}
+
 .custom-logo {
   font-size: 3rem;
 }
@@ -113,4 +117,105 @@ body {
   margin-bottom: 15px;
   background-color: #2d2e30;
   transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.left-column {
+  height: 1000px;
+}
+
+.ai-chat {
+  height: 55%;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #2d2e30;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.aichat-form {
+  display: flex;
+  width: auto;
+  height: 40px;
+  margin-top: 15px;
+}
+
+.aichat-input {
+  width: auto;
+  height: 100%;
+  border-radius: 8px;
+  background-color: #DDDDDD;
+  border: none;
+  padding: 0 15px;
+  color: black;
+}
+
+.aichat-send-btn {
+  margin-left: 10px;
+  width: 80px;
+  height: 100%;
+  border-radius: 8px;
+  background-color: #3B82F6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.aichat-send-btn:hover {
+  background-color: #2563EB;
+}
+
+.ai-summary {
+  height: 55%;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #2d2e30;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.ai-summary-title, .ai-chat-title {
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.news-detail {
+  height: 95.5%;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #2d2e30;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.newsdetail-category {
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background-color: #303134;
+  border: 1px solid #3c4043;
+  color: #e8eaed;
+}
+
+.translation-btn {
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background-color: #064e3b;
+  border: 1px solid #065f46;
+  color: #d1fae5;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.back-btn {
+  text-align: center;
+  text-decoration: none;
+  width: 180px;
+  height: 100%;
+  border-radius: 8px;
+  padding: 6px 12px;
+  background-color: #3B82F6;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
